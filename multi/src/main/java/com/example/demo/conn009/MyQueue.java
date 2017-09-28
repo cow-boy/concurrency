@@ -4,6 +4,10 @@ import java.util.LinkedList;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * 使用notify、wait模拟Queue
+ */
+
 public class MyQueue {
 	
 	//1 需要一个承装元素的集合 
