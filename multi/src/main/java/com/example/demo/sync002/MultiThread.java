@@ -40,22 +40,22 @@ public class MultiThread {
 		final MultiThread m1 = new MultiThread();
 		final MultiThread m2 = new MultiThread();
 		
-		Thread t1 = new Thread(new Runnable() {
+		/*Thread t1 = new Thread(new Runnable() {
 			@Override
 			public void run() {
 				m1.printNum("a");
 			}
-		});
-		
-		Thread t2 = new Thread(new Runnable() {
+		});*/
+        Thread t1 = new Thread(() -> m1.printNum("a"));
+		/*Thread t2 = new Thread(new Runnable() {
 			@Override 
 			public void run() {
 				m2.printNum("b");
 			}
-		});		
-		
-		t1.start();
-		t2.start();
+		});		*/
+        Thread t2 = new Thread(() -> m2.printNum("b"));
+        t1.start();
+        t2.start();
 		
 	}
 	
